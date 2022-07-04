@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="471.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24hostel.controller.ReportFormController">
+   <children>
+      <ImageView fitHeight="574.0" fitWidth="781.0" opacity="0.83" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/istockphoto-1301156172-170667a.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgHome" fitHeight="50.0" fitWidth="51.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+      </ImageView>
+      <Text fill="#e41313" layoutX="264.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Reservation Details">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Separator layoutX="9.0" layoutY="64.0" prefHeight="17.0" prefWidth="764.0" />
+      <TableView fx:id="tblReservations" layoutX="10.0" layoutY="87.0" prefHeight="329.0" prefWidth="764.0">
+        <columns>
+          <TableColumn fx:id="colReservationId" prefWidth="120.0" text="Reservation ID" />
+          <TableColumn fx:id="colDate" prefWidth="165.0" text="Date" />
+            <TableColumn fx:id="colStudentId" prefWidth="149.0" text="Student ID" />
+            <TableColumn fx:id="colRoomId" prefWidth="171.0" text="Room ID" />
+            <TableColumn fx:id="colPayments" prefWidth="158.0" text="Payment Status" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ed5c5c80" height="139.0" layoutX="10.0" layoutY="424.0" opacity="0.64" stroke="#eb5b5b80" strokeType="INSIDE" width="764.0" />
+      <JFXTextField fx:id="txtStudentId" focusColor="BLACK" labelFloat="true" layoutX="343.0" layoutY="450.0" prefHeight="32.0" prefWidth="135.0" promptText="Student ID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRoomId" focusColor="BLACK" labelFloat="true" layoutX="492.0" layoutY="450.0" prefHeight="32.0" prefWidth="135.0" promptText="Room ID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="669.0" layoutY="429.0" text="Payments">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPayments" layoutX="648.0" layoutY="453.0" prefHeight="32.0" prefWidth="111.0" text="Pending/Payed">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="rdoPay" layoutX="648.0" layoutY="494.0" onAction="#paymentOnAction" text="Pay">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rdoLater" layoutX="648.0" layoutY="530.0" onAction="#paymentOnAction" text="Not Now">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="39.0" layoutY="518.0" onAction="#updateBtnOnAction" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: #1ca45e;" text="Update Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="20" wrappingWidth="27.14285659790039" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="239.0" layoutY="518.0" onAction="#deleteBtnOnAction" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: #dd3535;" text="Delete Record" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" wrappingWidth="27.14285659790039" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="597.0" layoutY="12.0" text="Date : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="599.0" layoutY="44.0" text="Time :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="656.0" layoutY="12.0" prefHeight="20.0" prefWidth="111.0" text="2022-06-29">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="656.0" layoutY="44.0" prefHeight="20.0" prefWidth="111.0" text="22.30 PM">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="datePicker" defaultColor="BLACK" layoutX="171.0" layoutY="450.0" prefHeight="32.0" prefWidth="143.0" />
+      <JFXComboBox fx:id="cmbReservationId" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="450.0" prefHeight="32.0" prefWidth="135.0" promptText="Reservation ID" />
+   </children>
+</AnchorPane>

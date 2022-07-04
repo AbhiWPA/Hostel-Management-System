@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="536.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24hostel.controller.ManageRoomDetailsFormController">
+   <children>
+      <ImageView fitHeight="587.0" fitWidth="796.0" opacity="0.73" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/pousada-dois-irmaos.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="RED" layoutX="241.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Room Details">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Separator layoutX="6.0" layoutY="50.0" prefHeight="8.0" prefWidth="781.0" />
+      <Separator layoutX="5.0" layoutY="169.0" prefHeight="8.0" prefWidth="781.0" />
+      <Pane layoutX="21.0" layoutY="58.0" prefHeight="111.0" prefWidth="752.0" style="-fx-background-color: #ffffff69; -fx-border-radius: 30px; -fx-background-radius: 30px;">
+         <children>
+            <Label layoutX="11.0" layoutY="1.0" prefHeight="27.0" prefWidth="181.0" style="-fx-background-color: #09962c; -fx-background-radius: 15px;" text="  Rooms Availability" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="47.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #3129a1;" text="  Non-AC   :" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="73.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #3129a1;" text="  RM-1324" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="nonAc" alignment="CENTER" layoutX="129.0" layoutY="53.0" prefHeight="40.0" prefWidth="43.0" style="-fx-background-color: #b7bb42;" text="35">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="47.0" prefHeight="26.0" prefWidth="147.0" style="-fx-background-color: #3129a1;" text="  Non-AC/Food :" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="73.0" prefHeight="26.0" prefWidth="147.0" style="-fx-background-color: #3129a1;" text="  RM-5467" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="nonAcFood" alignment="CENTER" layoutX="353.0" layoutY="53.0" prefHeight="40.0" prefWidth="43.0" style="-fx-background-color: #b7bb42;" text="20">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="417.0" layoutY="47.0" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #3129a1;" text="   AC   :" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="417.0" layoutY="73.0" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #3129a1;" text="  RM-1324" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="Ac" alignment="CENTER" layoutX="516.0" layoutY="53.0" prefHeight="40.0" prefWidth="43.0" style="-fx-background-color: #b7bb42;" text="14">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="585.0" layoutY="47.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #3129a1;" text="  AC/Food   :" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="585.0" layoutY="73.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #3129a1;" text="  RM-1324" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="AcFood" alignment="CENTER" layoutX="700.0" layoutY="53.0" prefHeight="40.0" prefWidth="43.0" style="-fx-background-color: #b7bb42;" text="10">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Line endX="-5.0" endY="-10.0" layoutX="191.0" layoutY="48.0" startX="-5.0" startY="57.0" />
+            <Line endX="-5.0" endY="-10.0" layoutX="411.0" layoutY="49.0" startX="-5.0" startY="57.0" />
+            <Line endX="-5.0" endY="-10.0" layoutX="577.0" layoutY="48.0" startX="-5.0" startY="57.0" />
+         </children></Pane>
+      <Pane layoutX="7.0" layoutY="182.0" prefHeight="399.0" prefWidth="257.0" style="-fx-background-color: #ffffff69; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #000000;">
+         <children>
+            <Label alignment="CENTER" layoutX="24.0" layoutY="1.0" prefHeight="17.0" prefWidth="206.0" style="-fx-background-color: #129618;" text="Add New Room" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Text layoutX="12.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Id :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="7.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Type :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="12.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Money :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtRoomId" focusColor="#061540" layoutX="16.0" layoutY="150.0" prefHeight="25.0" prefWidth="174.0" unFocusColor="#070632">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtKeyMoney" focusColor="#061540" layoutX="17.0" layoutY="216.0" prefHeight="25.0" prefWidth="174.0" unFocusColor="#070632">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtQty" focusColor="#061540" layoutX="16.0" layoutY="284.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="174.0" unFocusColor="#070632">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbRoomType" focusColor="#061540" layoutX="16.0" layoutY="76.0" prefHeight="31.0" prefWidth="174.0" />
+            <JFXButton fx:id="btnAddRoom" buttonType="RAISED" layoutX="45.0" layoutY="346.0" onAction="#btnAddRoomOnAction" prefHeight="39.0" prefWidth="165.0" style="-fx-background-color: #0a3d62" text="Add Room" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" wrappingWidth="35.428571701049805" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></Pane>
+      <Pane layoutX="267.0" layoutY="182.0" prefHeight="399.0" prefWidth="257.0" style="-fx-background-color: #ffffff69; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #000000;">
+         <children>
+            <Label alignment="CENTER" layoutX="26.0" layoutY="1.0" prefHeight="17.0" prefWidth="206.0" style="-fx-background-color: #129618;" text="Update Room Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Text layoutX="19.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Id :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Type :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="19.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Money :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="21.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="cmbRoomId" focusColor="#070707" layoutX="19.0" layoutY="75.0" prefHeight="31.0" prefWidth="174.0" unFocusColor="#220707" />
+            <JFXTextField fx:id="txtUpdateKeyMoney" focusColor="#061540" layoutX="19.0" layoutY="208.0" prefHeight="25.0" prefWidth="174.0" unFocusColor="#070632">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUpdateQty" focusColor="#061540" layoutX="19.0" layoutY="285.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="174.0" unFocusColor="#070632">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbUpdateRoomType" focusColor="#061540" layoutX="14.0" layoutY="144.0" prefHeight="31.0" prefWidth="174.0" />
+            <JFXButton fx:id="btnUpdateRoom" buttonType="RAISED" layoutX="47.0" layoutY="346.0" onAction="#updateRoomBtnOnAction" prefHeight="39.0" prefWidth="165.0" style="-fx-background-color: #0daa7c;" text="Update Room" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="20" wrappingWidth="18.14285659790039" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></Pane>
+      <Pane layoutX="529.0" layoutY="182.0" prefHeight="399.0" prefWidth="257.0" style="-fx-background-color: #ffffff69; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #000000;">
+         <children>
+            <Label alignment="CENTER" layoutX="26.0" layoutY="1.0" prefHeight="17.0" prefWidth="206.0" style="-fx-background-color: #129618;" text="Delete Room" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Text layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Id :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="cmbDeleteRoomId" focusColor="#070707" layoutX="14.0" layoutY="77.0" prefHeight="31.0" prefWidth="174.0" unFocusColor="#220707" />
+            <Text layoutX="16.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Type :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="17.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Money :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="19.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty :">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtDeleteKeyMoney" focusColor="#061540" layoutX="17.0" layoutY="206.0" prefHeight="25.0" prefWidth="174.0" unFocusColor="#070632">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtDeleteQty" focusColor="#061540" layoutX="17.0" layoutY="283.0" prefHeight="25.0" prefWidth="174.0" unFocusColor="#070632">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtDeleteRoomType" focusColor="#061540" layoutX="14.0" layoutY="145.0" prefHeight="25.0" prefWidth="174.0" unFocusColor="#070632">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnDeleteRoom" buttonType="RAISED" layoutX="46.0" layoutY="346.0" onAction="#deleteRoomBtnOnAction" prefHeight="39.0" prefWidth="165.0" style="-fx-background-color: darkred" text="Delete Room" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" wrappingWidth="22.714285850524902" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></Pane>
+      <ImageView fx:id="imgHome" fitHeight="57.0" fitWidth="65.0" layoutX="7.0" layoutY="1.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="603.0" layoutY="4.0" text="Date : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="605.0" layoutY="36.0" text="Time :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="662.0" layoutY="4.0" prefHeight="20.0" prefWidth="111.0" text="2022-06-29">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="662.0" layoutY="36.0" prefHeight="20.0" prefWidth="111.0" text="22.30 PM">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="358.0" prefWidth="655.0" style="-fx-background-color: #ffffff69;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24hostel.controller.AddNewStudentFormController">
+   <children>
+      <Label layoutX="22.0" layoutY="25.0" text="Student ID :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="25.0" text="Student Name :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="111.0" text="Student Address :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="198.0" text="Date of Birth :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="111.0" text="Contact Number">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="198.0" text="Select Gender :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtId" focusColor="BLACK" layoutX="22.0" layoutY="52.0" onKeyPressed="#enterKeyPressed" prefHeight="34.0" prefWidth="246.0" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" focusColor="BLACK" layoutX="362.0" layoutY="52.0" onKeyPressed="#enterKeyPressed" prefHeight="34.0" prefWidth="279.0" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="BLACK" layoutX="362.0" layoutY="145.0" onKeyPressed="#enterKeyPressed" prefHeight="34.0" prefWidth="279.0" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" focusColor="BLACK" layoutX="19.0" layoutY="145.0" onKeyPressed="#enterKeyPressed" prefHeight="34.0" prefWidth="246.0" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="datePicker" defaultColor="BLACK" layoutX="19.0" layoutY="241.0" prefHeight="34.0" prefWidth="246.0" />
+      <JFXRadioButton fx:id="maleBtn" layoutX="366.0" layoutY="241.0" onAction="#genderOnAction" prefHeight="34.0" prefWidth="69.0" text="Male">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="femaleBtn" layoutX="511.0" layoutY="241.0" onAction="#genderOnAction" prefHeight="34.0" prefWidth="79.0" text="Female">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="238.0" layoutY="294.0" onAction="#saveBtnOnAction" prefHeight="34.0" prefWidth="179.0" style="-fx-background-color: #21a446;" text="Save Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@assets/icons8-save-close.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

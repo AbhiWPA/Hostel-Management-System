@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="553.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24hostel.controller.SecurityFormController">
+   <children>
+      <ImageView fitHeight="566.0" fitWidth="387.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/b2.jpg" />
+         </image>
+      </ImageView>
+      <FontAwesomeIconView glyphName="SHIELD" layoutX="86.0" layoutY="387.0" opacity="0.35" size="300" />
+      <Text fill="#d72c2c" layoutX="110.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Security">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imgHome" fitHeight="48.0" fitWidth="51.0" layoutX="7.0" layoutY="8.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="10.0" layoutY="59.0" prefHeight="7.0" prefWidth="367.0" />
+      <Pane layoutX="14.0" layoutY="83.0" prefHeight="197.0" prefWidth="367.0" style="-fx-background-color: #ffffff69; -fx-background-radius: 20px;">
+         <children>
+            <JFXTextField fx:id="txtCurrentUserName" focusColor="BLACK" labelFloat="true" layoutX="69.0" layoutY="24.0" prefHeight="40.0" prefWidth="260.0" promptText="Current User Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIconView glyphName="USER" layoutX="14.0" layoutY="60.0" size="35" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="10.0" layoutY="137.0" size="35" />
+            <JFXPasswordField fx:id="txtCurrentPswd" focusColor="BLACK" labelFloat="true" layoutX="69.0" layoutY="102.0" prefHeight="40.0" prefWidth="260.0" promptText="Current Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnNext" buttonType="RAISED" layoutX="212.0" layoutY="159.0" onAction="#nextBtnOnAction" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #229d38;" text="Next" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="286.0" prefHeight="264.0" prefWidth="367.0" style="-fx-background-color: #ffffff69; -fx-background-radius: 20px;">
+         <children>
+            <JFXTextField fx:id="txtNewUserName" focusColor="BLACK" labelFloat="true" layoutX="69.0" layoutY="22.0" onKeyPressed="#enterKeyPressed" prefHeight="40.0" prefWidth="260.0" promptText="New User Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIconView glyphName="USER" layoutX="14.0" layoutY="58.0" size="35" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="14.0" layoutY="129.0" size="35" />
+            <JFXPasswordField fx:id="txtNewPassword" focusColor="BLACK" labelFloat="true" layoutX="73.0" layoutY="94.0" onKeyPressed="#enterKeyPressed" prefHeight="40.0" prefWidth="260.0" promptText="New Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <FontAwesomeIconView glyphName="CHECK_SQUARE" layoutX="13.0" layoutY="203.0" size="35" />
+            <JFXPasswordField fx:id="txtConfirmPswd" focusColor="BLACK" labelFloat="true" layoutX="69.0" layoutY="169.0" onKeyPressed="#enterKeyPressed" prefHeight="40.0" prefWidth="260.0" promptText="Confirm Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="212.0" layoutY="226.0" onAction="#updateBtnOnAction" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #ae2121;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="15" wrappingWidth="18.857142448425293" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
